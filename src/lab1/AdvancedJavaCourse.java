@@ -14,10 +14,11 @@ public class AdvancedJavaCourse extends Course{
 //    private double credits;
 //    private String prerequisites;
 
-    public AdvancedJavaCourse(String courseName, String courseNumber, String prerequisite) {
+    public AdvancedJavaCourse(String courseName, String courseNumber, double credits, String prerequisites) {
         this.setCourseName(courseName);
         this.setCourseNumber(courseNumber);
-        this.setPrerequisites(prerequisite);
+        this.setCredits(credits);
+        this.setPrerequisites(prerequisites);
     }
 
 //    public String getPrerequisites() {

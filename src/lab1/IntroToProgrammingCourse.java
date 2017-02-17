@@ -17,6 +17,7 @@ public class IntroToProgrammingCourse extends Course{
     public IntroToProgrammingCourse(String courseName, String courseNumber, double credits, String prerequisites) {
         this.setCourseName(courseName);
         this.setCourseNumber(courseNumber);
+        this.setCredits(credits);
         this.setPrerequisites("None");
     }
 
