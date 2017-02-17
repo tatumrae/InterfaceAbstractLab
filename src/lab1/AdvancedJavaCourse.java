@@ -20,6 +20,10 @@ public class AdvancedJavaCourse extends Course{
         this.setCredits(credits);
         this.setPrerequisites(prerequisites);
     }
+    
+    public void coverInheritanceContent() {
+        System.out.println(getCourseName() + " is covering Inheritance content right now.");
+    }
 
 //    public String getPrerequisites() {
 //        return prerequisites;

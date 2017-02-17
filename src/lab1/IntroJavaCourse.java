@@ -18,6 +18,10 @@ public class IntroJavaCourse extends Course{
         this.setCredits(credits);
         this.setPrerequisites(prerequisites);
     }
+    
+    public void coverJavaClassesContent() {
+        System.out.println(getCourseName() + " is covering Java Classes right now.");
+    }
 
 //    public String getCourseNumber() {
 //        return courseNumber;

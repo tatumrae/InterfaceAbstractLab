@@ -18,7 +18,11 @@ public class IntroToProgrammingCourse extends Course{
         this.setCourseName(courseName);
         this.setCourseNumber(courseNumber);
         this.setCredits(credits);
-        this.setPrerequisites("None");
+        this.setPrerequisites(prerequisites);
+    }
+    
+    public void useRaspberryPis() {
+        System.out.println(getCourseName() + " is utilizing Raspberry Pis right now.");
     }
 
 //    public String getCourseNumber() {

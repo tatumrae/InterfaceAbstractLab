@@ -8,14 +8,21 @@ import javax.swing.JOptionPane;
  * @author      your name goes here
  * @version     1.00
  */
-public class IntroToProgrammingCourse {
+public class IntroToProgrammingCourse implements Course{
     private String courseName;
-    String courseNumber;
+    private String courseNumber;
     private double credits;
+    private String prerequisites;
 
-    public IntroToProgrammingCourse(String courseName, String courseNumber) {
-        this.setCourseName(courseName);
-        this.setCourseNumber(courseNumber);
+    public IntroToProgrammingCourse(String courseName, String courseNumber, double credits, String prerequisites) {
+        this.courseName = courseName;
+        this.courseNumber = courseNumber;
+        this.credits = credits;
+        this.prerequisites = prerequisites;
+    }
+    
+    public void useRaspberryPis() {
+        System.out.println(getCourseName() + " is utilizing Raspberry Pis right now.");
     }
 
     public String getCourseNumber() {
@@ -55,6 +62,21 @@ public class IntroToProgrammingCourse {
             System.exit(0);
         }
         this.courseName = courseName;
+    }
+
+    @Override
+    public String getPrerequisites() {
+        return prerequisites;
+    }
+
+    @Override
+    public void setPrerequisites(String prerequisites) {
+        if(prerequisites == null || prerequisites.length() == 0) {
+            JOptionPane.showMessageDialog(null,
+                    "Error: prerequisites cannot be null of empty string");
+            System.exit(0);
+        }
+        this.prerequisites = prerequisites;
     }
 
     
